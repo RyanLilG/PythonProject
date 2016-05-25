@@ -1,0 +1,53 @@
+def total(hand):
+    # how many aces in the hand
+    aces = hand.count(11)
+    # to complicate things a little the ace can be 11 or 1
+    # this little while loop figures it out for you
+    t = sum(hand)
+    # you have gone over 21 but there is an ace
+    if t > 21 and aces > 0:
+        while aces > 0 and t > 21:
+            # this will switch the ace from 11 to 1
+            t -= 10
+            aces -= 1
+    return t
+    
+def hsupdate(money, highscore):  # updates the highscore
+    if money > highscore:
+        highscore = money
+    with open("highscore.txt", "w") as file:
+        file.write(str(highscore))
+    return highscore
+    
+# a suit of cards in blackjack assume the following values
+cards = [2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11]
+
+# there are 4 suits per deck and usually several decks
+# this way you can assume the cards list to be an unlimited pool
+cwin = 0  # computer win counter
+pwin = 0  # player win counter
+
+
+
+
+
+
+
+with open("highscore.txt", "r") as file:
+    highscore = int(file.readline())  # highscore contains the highscore
+
+with open("save.txt", "r") as file:
+    money = int(file.readline())  # money contains the score
+    
+with open("bet.txt", "r") as file:
+    bet = int(file.readline())
+
+
+highscore = hsupdate(money, highscore)
+
+bjp = False  # true if the player has a blackjack
+
+
+bet_done = False
+in_game = False
+stop_color=False
