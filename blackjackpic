@@ -1,0 +1,175 @@
+photo1 = PhotoImage(file="fond_projet.png")
+photo2 = PhotoImage(file="blackjack_logo.png")
+photo3 = PhotoImage(file="play.png")
+photo4 = PhotoImage(file="rules.png")
+photo5 = PhotoImage(file="signature.png")
+photo6 = PhotoImage(file="rulestexte.png")
+photo7 = PhotoImage(file="back.png")
+photo8 = PhotoImage(file="back.png")
+photo9 = PhotoImage(file="jeton1.png")
+photo10 = PhotoImage(file="jeton5.png")
+photo11 = PhotoImage(file="jeton25.png")
+photo12 = PhotoImage(file="jeton50.png")
+photo13 = PhotoImage(file="jeton100.png")
+photo14 = PhotoImage(file="jeton500.png")
+photo15 = PhotoImage(file="jeton1000.png")
+photo16 = PhotoImage(file="jeton5000.png")
+photo17 = PhotoImage(file="jeton10000.png")
+photo18 = PhotoImage(file="double.png")
+photo19 = PhotoImage(file="hit.png")
+photo20 = PhotoImage(file="stand.png")
+photo21 = PhotoImage(file="highscore.png")
+photo22 = PhotoImage(file="croix.png")
+photo23 = PhotoImage(file="doscarte.png")
+photo24 = PhotoImage(file="yourmoney.png")
+photo25 = PhotoImage(file="blackjack_logo_play.png")
+photo29 = PhotoImage(file="play_card.png")
+
+
+#an other test for the graphic code
+
+def print_menu(page):
+    canvas.delete("all")
+    id1 = canvas.create_image(0, 0, anchor=NW, image=photo1)
+    id2 = canvas.create_image(250, 20, anchor=NW, image=photo2)
+    id3 = canvas.create_image(390, 295, anchor=NW, image=photo3)
+    id4 = canvas.create_image(390, 450, anchor=NW, image=photo4)
+    id5 = canvas.create_image(390, 700, anchor=NW, image=photo5)
+    for i in range(0,30): #horyzontal line
+        canvas.create_line(0, 49*i, 1100, 49*i, fill="black", width=1)
+    for j in range(0,30): #vertical line
+        canvas.create_line(49*j, 0, 49*j, 843, fill="black", width=1)
+    
+
+def print_rules(page):
+    canvas.delete("all")
+    id1 = canvas.create_image(0, 0, anchor=NW, image=photo1)
+    id2 = canvas.create_image(250, 20, anchor=NW, image=photo2)
+    id5 = canvas.create_image(390, 700, anchor=NW, image=photo5)
+    id6 = canvas.create_image(300, 250, anchor=NW, image=photo6)
+    id7 = canvas.create_image(415, 610, anchor=NW, image=photo7)
+    for i in range(0,30): #horyzontal line
+        canvas.create_line(0, 49*i, 1100, 49*i, fill="black", width=1)
+    for j in range(0,30): #vertical line
+        canvas.create_line(49*j, 0, 49*j, 843, fill="black", width=1)
+
+
+
+
+def print_game(page):   
+    canvas.delete("all")
+    
+    with open("save.txt", "r") as file:
+        money = int(file.readline())
+    
+    id1 = canvas.create_image(0, 0, anchor=NW, image=photo1)
+    #id8 = canvas.create_image(900, 675, anchor=NW, image=photo8)
+    id9 = canvas.create_image(0,763, anchor=NW, image=photo9)
+    id10 = canvas.create_image(80,763, anchor=NW, image=photo10)
+    id11 = canvas.create_image(160,763, anchor=NW, image=photo11)
+    id12 = canvas.create_image(240,763, anchor=NW, image=photo12)
+    id13 = canvas.create_image(320,763, anchor=NW, image=photo13)
+    id14 = canvas.create_image(400,763, anchor=NW, image=photo14)
+    id15 = canvas.create_image(0,683, anchor=NW, image=photo15)
+    id16 = canvas.create_image(80,683, anchor=NW, image=photo16)
+    id17 = canvas.create_image(160,683, anchor=NW, image=photo17)
+    id18 = canvas.create_image(50,600, anchor=NW, image=photo18)
+    id19 = canvas.create_image(920,600, anchor=NW, image=photo19)
+    id20 = canvas.create_image(920,670, anchor=NW, image=photo20)
+    id21 = canvas.create_image(920,20, anchor=NW, image=photo21)
+    id22 = canvas.create_image(75,368, anchor=NW, image=photo22)
+    #id23_1 = canvas.create_image(450,50, anchor=NW, image=photo23)
+    #id23_2 = canvas.create_image(490,50, anchor=NW, image=photo23)
+    #id23_3 = canvas.create_image(450,500, anchor=NW, image=photo23)
+    #id23_4 = canvas.create_image(490,500, anchor=NW, image=photo23)
+    id24 = canvas.create_image(600,800, anchor=NW, image=photo24)
+    id25 = canvas.create_image(-50,-50, anchor=NW, image=photo25)
+    id26 = canvas.create_text(1000, 65, text=str(highscore), font=("Bookman Old Style",18,'bold'), fill="yellow")
+    #id27 = canvas.create_text(950, 400, text="$0", font=("Bookman Old Style",30,'bold','italic'), fill="yellow")
+    #id28 = canvas.create_text(900, 810, text="$"+str(money), font=("Bookman Old Style",20,'bold','italic'), fill="yellow")
+    #id29 = canvas.create_image(500, 390, anchor=NW, image=photo29)
+    for i in range(0,30): #horyzontal line
+        canvas.create_line(0, 49*i, 1100, 49*i, fill="black", width=1)
+    for j in range(0,30): #vertical line
+        canvas.create_line(49*j, 0, 49*j, 843, fill="black", width=1)
+    
+
+
+
+print_game(page)
+
+
+id23_1 = canvas.create_image(450,50, anchor=NW, image=photo23)
+id23_2 = canvas.create_image(490,50, anchor=NW, image=photo23)
+id23_3 = canvas.create_image(450,500, anchor=NW, image=photo23)
+id23_4 = canvas.create_image(490,500, anchor=NW, image=photo23)
+
+id27 = canvas.create_text(950, 400, text="$"+str(bet), font=("Bookman Old Style",30,'bold','italic'), fill="yellow")
+id28 = canvas.create_text(930, 810, text="$"+str(money), font=("Bookman Old Style",20,'bold','italic'), fill="yellow")
+id29 = canvas.create_image(500, 390, anchor=NW, image=photo29)
+
+player = []
+# draw 2 cards for the player to start
+player.append(rc(cards))
+player.append(rc(cards))
+# draw 2 cards for the computer to start
+comp = []
+comp.append(rc(cards))
+
+
+
+tr_A = PhotoImage(file="A_tr.png")
+tr_2 = PhotoImage(file="2_tr.png")
+tr_3 = PhotoImage(file="3_tr.png")
+tr_4 = PhotoImage(file="4_tr.png")
+tr_5 = PhotoImage(file="5_tr.png")
+tr_6 = PhotoImage(file="6_tr.png")
+tr_7 = PhotoImage(file="7_tr.png")
+tr_8 = PhotoImage(file="8_tr.png")
+tr_9 = PhotoImage(file="9_tr.png")
+tr_10 = PhotoImage(file="10_tr.png")
+tr_J = PhotoImage(file="J_tr.png")
+tr_Q = PhotoImage(file="Q_tr.png")
+tr_K = PhotoImage(file="K_tr.png")
+
+pi_A = PhotoImage(file="A_pi.png")
+pi_2 = PhotoImage(file="2_pi.png")
+pi_3 = PhotoImage(file="3_pi.png")
+pi_4 = PhotoImage(file="4_pi.png")
+pi_5 = PhotoImage(file="5_pi.png")
+pi_6 = PhotoImage(file="6_pi.png")
+pi_7 = PhotoImage(file="7_pi.png")
+pi_8 = PhotoImage(file="8_pi.png")
+pi_9 = PhotoImage(file="9_pi.png")
+pi_10 = PhotoImage(file="10_pi.png")
+pi_J = PhotoImage(file="J_pi.png")
+pi_Q = PhotoImage(file="Q_pi.png")
+pi_K = PhotoImage(file="K_pi.png")
+
+co_A = PhotoImage(file="A_co.png")
+co_2 = PhotoImage(file="2_co.png")
+co_3 = PhotoImage(file="3_co.png")
+co_4 = PhotoImage(file="4_co.png")
+co_5 = PhotoImage(file="5_co.png")
+co_6 = PhotoImage(file="6_co.png")
+co_7 = PhotoImage(file="7_co.png")
+co_8 = PhotoImage(file="8_co.png")
+co_9 = PhotoImage(file="9_co.png")
+co_10 = PhotoImage(file="10_co.png")
+co_J = PhotoImage(file="J_co.png")
+co_Q = PhotoImage(file="Q_co.png")
+co_K = PhotoImage(file="K_co.png")
+
+ca_A = PhotoImage(file="A_ca.png")
+ca_2 = PhotoImage(file="2_ca.png")
+ca_3 = PhotoImage(file="3_ca.png")
+ca_4 = PhotoImage(file="4_ca.png")
+ca_5 = PhotoImage(file="5_ca.png")
+ca_6 = PhotoImage(file="6_ca.png")
+ca_7 = PhotoImage(file="7_ca.png")
+ca_8 = PhotoImage(file="8_ca.png")
+ca_9 = PhotoImage(file="9_ca.png")
+ca_10 = PhotoImage(file="10_ca.png")
+ca_J = PhotoImage(file="J_ca.png")
+ca_Q = PhotoImage(file="Q_ca.png")
+ca_K = PhotoImage(file="K_ca.png")
