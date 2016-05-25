@@ -1,0 +1,80 @@
+ if x >= 935 and x <= 1010 and y >= 600 and y <= 650:#hit
+            player.append(rc(cards))
+            print(player)
+           
+            for i in range(2,len(player)):
+                if player[i] == 11:
+                    card = rc([tr_A, pi_A, co_A, ca_A])
+                    canvas.create_image(450+40*(i), 500, anchor=NW, image=card)
+                elif player[i] == 2:
+                    card = rc([tr_2, pi_2, co_2, ca_2])
+                    canvas.create_image(450+40*(i), 500, anchor=NW, image=card)
+                elif player[i] == 3:
+                    card = rc([tr_3, pi_3, co_3, ca_3])
+                    canvas.create_image(450+40*(i), 500, anchor=NW, image=card)
+                elif player[i] == 4:
+                    card = rc([tr_4, pi_4, co_4, ca_4])
+                    canvas.create_image(450+40*(i), 500, anchor=NW, image=card)
+                elif player[i] == 5:
+                    card = rc([tr_5, pi_5, co_5, ca_5])
+                    canvas.create_image(450+40*(i), 500, anchor=NW, image=card)
+                elif player[i] == 6:
+                    card = rc([tr_6, pi_6, co_6, ca_6])
+                    canvas.create_image(450+40*(i), 500, anchor=NW, image=card)
+                elif player[i] == 7:
+                    card = rc([tr_7, pi_7, co_7, ca_7])
+                    canvas.create_image(450+40*(i), 500, anchor=NW, image=card)
+                elif player[i] == 8:
+                    card = rc([tr_8, pi_8, co_8, ca_8])
+                    canvas.create_image(450+40*(i), 500, anchor=NW, image=card)
+                elif player[i] == 9:
+                    card = rc([tr_9, pi_9, co_9, ca_9])
+                    canvas.create_image(450+40*(i), 500, anchor=NW, image=card)
+                elif player[i] == 10:
+                    card = rc([tr_10, pi_10, co_10, ca_10, tr_J, pi_J, co_J, ca_J, tr_Q, pi_Q, co_Q, ca_Q, tr_K, pi_K, co_K, ca_K])
+                    canvas.create_image(450+40*(i), 500, anchor=NW, image=card)
+        
+        if x >= 50 and x <= 250 and y >= 600 and y <= 650:#double
+            canvas.delete(id27)
+            canvas.delete(id28)
+            money = money-bet
+            bet *= 2
+            print(bet)
+            
+            player.append(rc(cards))
+            for i in range(2,len(player)):
+                if player[i] == 11:
+                    card = rc([tr_A, pi_A, co_A, ca_A])
+                    canvas.create_image(450+40*(i), 500, anchor=NW, image=card)
+                elif player[i] == 2:
+                    card = rc([tr_2, pi_2, co_2, ca_2])
+                    canvas.create_image(450+40*(i), 500, anchor=NW, image=card)
+                elif player[i] == 3:
+                    card = rc([tr_3, pi_3, co_3, ca_3])
+                    canvas.create_image(450+40*(i), 500, anchor=NW, image=card)
+                elif player[i] == 4:
+                    card = rc([tr_4, pi_4, co_4, ca_4])
+                    canvas.create_image(450+40*(i), 500, anchor=NW, image=card)
+                elif player[i] == 5:
+                    card = rc([tr_5, pi_5, co_5, ca_5])
+                    canvas.create_image(450+40*(i), 500, anchor=NW, image=card)
+                elif player[i] == 6:
+                    card = rc([tr_6, pi_6, co_6, ca_6])
+                    canvas.create_image(450+40*(i), 500, anchor=NW, image=card)
+                elif player[i] == 7:
+                    card = rc([tr_7, pi_7, co_7, ca_7])
+                    canvas.create_image(450+40*(i), 500, anchor=NW, image=card)
+                elif player[i] == 8:
+                    card = rc([tr_8, pi_8, co_8, ca_8])
+                    canvas.create_image(450+40*(i), 500, anchor=NW, image=card)
+                elif player[i] == 9:
+                    card = rc([tr_9, pi_9, co_9, ca_9])
+                    canvas.create_image(450+40*(i), 500, anchor=NW, image=card)
+                elif player[i] == 10:
+                    card = rc([tr_10, pi_10, co_10, ca_10, tr_J, pi_J, co_J, ca_J, tr_Q, pi_Q, co_Q, ca_Q, tr_K, pi_K, co_K, ca_K])
+                    canvas.create_image(450+40*(i), 500, anchor=NW, image=card)
+            
+            
+        
+        if x >= 935 and x <= 1085 and y >= 675 and y <= 725:#stand
+            pass
